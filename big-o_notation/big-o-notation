@@ -1,0 +1,31 @@
+Big O
+- a way of comparing two sets of code mathematically in terms of their efficiency.
+
+I. Time complexity - how fast your code runs?
+It is measured in the number of operations that it takes to complete something.
+(it's not measured in time since time can depend on a lot of external factors including hardware, etc.)
+
+II. Space complexity - how much memory space your code takes?
+
+
+Rules:
+1. Worst case considered
+2. Drop constants:
+two loops in sequence (not nested) - O(2n) - will be O(n)
+three nested loops - O(n**3) - will be O(n**2) (the same as O(n**4), O(n**10), etc.)
+3. Drop non-dominants:
+two nested loops + one more loop after - O(n**2 + n) - will be O(n**2)
+n**2 here is the dominant term while n is a non-dominant term
+4. Different terms for inputs:
+e.g. O(a+b) - for a function with 2 parameters and two loops (not nested) which run a and b times - O(a) + O(b) != O(n)
+O(a*b) - for a function with 2 parameters and two nested loops which run a and b times - O(a) * O(b) != O(n**2)
+
+
+O(n) - proportional
+O(n**2) - e.g. nested loops (each of which is running from 1 to N)
+O(1) - constant time - as n increases, the number of operations is going to remain constant
+O(logN) - divide and conquer, e.g. binary search
+O(nlogn) - e.g. some sorting algorithms - merge sort and quick sort
+
+
+with lists - O(1) on the right end, O(n) on the left end (because of re-indexing)
